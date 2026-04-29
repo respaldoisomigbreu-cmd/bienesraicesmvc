@@ -1,0 +1,23 @@
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/globales';
+@import 'base/utilidades';
+@import 'base/botones';
+@import 'base/darkMode';
+
+/*** Layout ***/
+@import 'layout/header';
+@import 'layout/navegacion';
+@import 'layout/iconos';
+@import 'layout/anuncio';
+@import 'layout/anuncio_1';
+@import 'layout/contactar';
+@import 'layout/inferior';
+@import 'layout/testimonial';
+@import 'layout/formulario';    
+@import 'layout/footer';    
+
+/*** Paginas ***/
+@import 'internas/nosotros';
+@import 'internas/admin';

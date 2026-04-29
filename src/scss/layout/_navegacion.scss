@@ -1,0 +1,96 @@
+
+.derecha{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include tablet {
+        align-items: flex-end;
+    }
+
+    .dark-mode-boton{
+        width: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+        filter: invert(100%);
+
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+}
+
+.barra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+
+    .img-logo {
+        max-width: auto;
+    }
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .img-logo {
+            max-width: 40%;
+        }
+    }
+
+
+}
+
+.navegacion{
+
+    visibility: hidden;  // Oculto por defecto
+    opacity: 0;         // Opacidad 0 para ocultar
+    height: 0;
+    transition: visibility .3s, ease-in-out, opacity 0.5s linear, height .5s linear;  // Transición suave
+
+    @include tablet {
+        display: flex;
+        align-items: center; 
+        opacity: 1;        // Visible en tabletas y superiores
+        visibility: visible;    // Visible en tabletas y superiores
+    }
+
+    a{
+        color: $blanco;
+        text-decoration: none;
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+
+        @include tablet{
+            margin-right: 1.8rem;
+            &:last-of-type{
+                margin-right: 0;
+            }   
+        }
+    
+    }
+}
+
+.mobile-menu {
+    @include tablet {
+        display: none;
+    }
+    img{
+        width: 5rem;
+
+    }
+}
+
+.mostrar {
+    visibility: inherit;        // Mostrar cuando se agrega esta clase
+    opacity: 1;                 // Opacidad 1 para mostrar
+    height: auto;                             
+}

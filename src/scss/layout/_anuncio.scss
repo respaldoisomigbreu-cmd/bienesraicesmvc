@@ -1,0 +1,87 @@
+
+
+@include tablet {
+    .contenedor-anuncios{
+        @include grid (3, 2rem);
+
+    }
+
+}  
+    // .anuncio_img{
+    // max-width: auto;
+    // max-height: 50rem;
+    // }
+
+    .anuncio_p{
+                
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* Número de líneas antes de los puntos */
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+
+
+
+.anuncio {
+    background-color: lighten( $gris, 5);
+    border: 1px solid darken($gris, 10) ;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+            
+
+}
+
+    source{
+        border-radius: 2rem;
+    }
+
+    img{
+        border-radius: 2rem;
+
+    }
+
+    .contenido-anuncio{
+        padding: 2rem;
+    }
+
+    h3,p {
+        margin: 0;
+        text-align:justify;
+
+        
+    }   
+
+
+
+
+
+    .precio{
+        color: $verde;
+        font-weight: $bold;
+        font-size: 3rem;
+        text-align: center;
+
+    }
+
+    
+.iconos-caracteristicas{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    max-width: 40rem;
+
+    li{
+        flex: 1;
+        display: flex;
+
+        img{
+            flex: 0 0 3rem;
+            margin-right: 1rem;
+            
+        }
+
+        p{
+            font-weight: $black;
+        }
+    }
+}

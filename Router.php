@@ -30,7 +30,8 @@ class Router {
     ];
 
     // Obtener la URL actual de forma más limpia
-    $urlActual = strtok($_SERVER['REQUEST_URI'], '?') ?: '/';
+    // $urlActual = strtok($_SERVER['REQUEST_URI'], '?') ?: '/';
+    $urlActual = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
     $metodo = $_SERVER['REQUEST_METHOD'];
 
     if ($metodo === 'GET') {
